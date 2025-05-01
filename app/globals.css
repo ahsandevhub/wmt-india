@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-yellow: #facc15;
+  --secondary-yellow: #fff8ea;
+  --tertiary-yellow: #967800;
+  --quaternary-yellow: #715400;
+  --quinary-yellow: #fffdf9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer utilities {
+  .text-primary-yellow {
+    color: var(--primary-yellow);
+  }
+  .bg-primary-yellow {
+    background-color: var(--primary-yellow);
+  }
+  .border-primary-yellow {
+    border-color: var(--primary-yellow);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .text-secondary-yellow {
+    color: var(--secondary-yellow);
+  }
+  .bg-secondary-yellow {
+    background-color: var(--secondary-yellow);
+  }
+
+  .text-tertiary-yellow {
+    color: var(--tertiary-yellow);
+  }
+  .bg-tertiary-yellow {
+    background-color: var(--tertiary-yellow);
+  }
+
+  .text-quaternary-yellow {
+    color: var(--quaternary-yellow);
+  }
+  .bg-quaternary-yellow {
+    background-color: var(--quaternary-yellow);
+  }
+
+  .text-quinary-yellow {
+    color: var(--quinary-yellow);
+  }
+  .bg-quinary-yellow {
+    background-color: var(--quinary-yellow);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
