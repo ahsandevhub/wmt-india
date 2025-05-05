@@ -15,65 +15,65 @@ import {
 export default function WhyChooseUs() {
   const features = [
     {
-      icon: <ShieldCheck className="w-8 h-8" />,
+      icon: <ShieldCheck className="w-6 h-6" />,
       title: "Zero-Risk Capital",
       desc: "Trade with our funds after passing the evaluation. No personal capital at stake.",
-      bg: "bg-secondary-yellow/20",
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <TrendingUp className="w-6 h-6" />,
       title: "Scale to $200K",
       desc: "Prove your skills and grow your account up to $200,000 through our scaling plan.",
-      bg: "bg-primary-yellow/10",
     },
     {
-      icon: <BarChart2 className="w-8 h-8" />,
+      icon: <BarChart2 className="w-6 h-6" />,
       title: "Advanced Metrics",
       desc: "Real-time analytics dashboard to track your performance and progress.",
-      bg: "bg-secondary-yellow/20",
     },
     {
-      icon: <UserPlus className="w-8 h-8" />,
+      icon: <UserPlus className="w-6 h-6" />,
       title: "Instant Onboarding",
       desc: "Start your challenge in minutes with instant account activation.",
-      bg: "bg-primary-yellow/10",
     },
     {
-      icon: <Clock className="w-8 h-8" />,
+      icon: <Clock className="w-6 h-6" />,
       title: "Fast-Track Funding",
       desc: "Get funded in as little as 3 days after passing your evaluation.",
-      bg: "bg-secondary-yellow/20",
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
+      icon: <DollarSign className="w-6 h-6" />,
       title: "90% Profit Split",
       desc: "Industry-leading profit share with weekly withdrawals available.",
-      bg: "bg-primary-yellow/10",
     },
     {
-      icon: <Repeat className="w-8 h-8" />,
+      icon: <Repeat className="w-6 h-6" />,
       title: "Unlimited Retries",
       desc: "Free retests if you don't pass on first attempt (conditions apply).",
-      bg: "bg-secondary-yellow/20",
     },
     {
-      icon: <Award className="w-8 h-8" />,
+      icon: <Award className="w-6 h-6" />,
       title: "Elite Community",
       desc: "Access to our private network of funded traders and mentors.",
-      bg: "bg-primary-yellow/10",
     },
   ];
 
-  return (
-    <section id="why" className="relative py-24 overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 -z-10 opacity-10">
-        <div className="absolute top-20 left-10 w-80 h-80 rounded-full bg-primary-yellow blur-3xl"></div>
-        <div className="absolute bottom-10 right-20 w-60 h-60 rounded-full bg-tertiary-yellow blur-3xl"></div>
-      </div>
+  const stats = [
+    { value: "$15M+", label: "Paid to Traders" },
+    { value: "10K+", label: "Funded Traders" },
+    { value: "24/7", label: "Support" },
+    { value: "90%", label: "Profit Split" },
+  ];
 
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary-yellow/10 to-transparent"></div>
+  return (
+    <section
+      id="why"
+      className="relative py-24 overflow-hidden bg-[var(--tertiary-yellow)]"
+    >
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/wireframe.png')] opacity-10"></div>
+        <div className="absolute top-20 left-10 w-80 h-80 rounded-full bg-[var(--primary-yellow)] blur-[100px] opacity-10"></div>
+        <div className="absolute bottom-10 right-20 w-60 h-60 rounded-full bg-[var(--secondary-yellow)] blur-[100px] opacity-10"></div>
+      </div>
 
       <motion.div
         variants={staggerContainer}
@@ -82,34 +82,40 @@ export default function WhyChooseUs() {
         viewport={{ once: true, margin: "-100px" }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
+        {/* Section Header */}
         <motion.div
           variants={fadeIn("up", "spring", 0.1, 1)}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-quaternary-yellow mb-4">
-            The <span className="text-primary-yellow">WMT Advantage</span>
+          <span className="inline-block bg-[var(--primary-yellow)]/10 text-[var(--primary-yellow)] px-4 py-2 rounded-full text-sm font-medium mb-4">
+            Why Choose Us
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            The{" "}
+            <span className="text-[var(--primary-yellow)]">WMT Advantage</span>
           </h2>
-          <p className="text-xl text-tertiary-yellow max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Why thousands of traders choose WMT as their preferred prop firm
             partner
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {features.map((item, index) => (
             <motion.div
               key={index}
               variants={fadeIn("up", "spring", index * 0.1, 1)}
-              whileHover={{ y: -10 }}
-              className={`${item.bg} rounded-2xl p-8 border border-secondary-yellow/30 hover:border-primary-yellow/50 transition-all`}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-xl p-6 border border-gray-100 hover:border-[var(--primary-yellow)]/30 hover:shadow-lg transition-all"
             >
-              <div className="w-14 h-14 rounded-full bg-primary-yellow/10 flex items-center justify-center mb-6 text-primary-yellow">
+              <div className="w-12 h-12 rounded-lg bg-[var(--primary-yellow)]/10 flex items-center justify-center mb-4 text-[var(--primary-yellow)]">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold text-quaternary-yellow mb-3">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
                 {item.title}
               </h3>
-              <p className="text-tertiary-yellow">{item.desc}</p>
+              <p className="text-gray-600">{item.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -117,34 +123,35 @@ export default function WhyChooseUs() {
         {/* Stats counter */}
         <motion.div
           variants={fadeIn("up", "spring", 0.5, 1)}
-          className="mt-20 bg-gradient-to-r from-primary-yellow/5 to-secondary-yellow/5 border border-primary-yellow/20 rounded-2xl p-8 backdrop-blur-sm"
+          className="bg-gradient-to-r from-[var(--primary-yellow)]/5 to-[var(--secondary-yellow)]/5 border border-[var(--primary-yellow)]/20 rounded-2xl p-8 backdrop-blur-sm"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary-yellow mb-2">
-                $15M+
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-[var(--primary-yellow)] mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-600">{stat.label}</div>
               </div>
-              <div className="text-tertiary-yellow">Paid to Traders</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary-yellow mb-2">
-                10K+
-              </div>
-              <div className="text-tertiary-yellow">Funded Traders</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary-yellow mb-2">
-                24/7
-              </div>
-              <div className="text-tertiary-yellow">Support</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary-yellow mb-2">
-                90%
-              </div>
-              <div className="text-tertiary-yellow">Profit Split</div>
-            </div>
+            ))}
           </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          variants={fadeIn("up", "spring", 0.7, 1)}
+          className="mt-20 text-center"
+        >
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            Ready to start your funded trading journey?
+          </h3>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-[var(--primary-yellow)] text-gray-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:bg-[var(--secondary-yellow)]"
+          >
+            Begin Evaluation Now
+          </motion.button>
         </motion.div>
       </motion.div>
     </section>
